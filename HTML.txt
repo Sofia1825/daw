@@ -1,0 +1,3 @@
+html no es lenguaje de programacion
+css tampoco lo es 
+html funciona con etiquetas osea, <>

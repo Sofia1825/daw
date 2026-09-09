@@ -1,11 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RobotFuture - Ubicaciones</title>
+
+    <link
+        rel="stylesheet"
+        href="estilos.css"
+    >
+
 </head>
+
 <body>
+
+
+  
+
+    <header>
+
+        <a href="../index.html">
+
+            <img
+                src="../img/logo.png"
+                alt="Logo de RobotFuture"
+                class="logo"
+            >
+
+        </a>
+
+
+        <button id="modoOscuro">
+             modo oscuro
+        </button>
+
+    </header>
+
+
+   
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="../index.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="Modelos.html">
+                    Modelos
+                </a>
+            </li>
+
+            <li>
+                <a href="Ubicaciones.html">
+                    Ubicaciones
+                </a>
+            </li>
+
+            <li>
+                <a href="Contactos.html">
+                    Contactos
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <main>
+
+
+        
+
+        <section>
+
+            <h1>
+                Nuestras ubicaciones
+            </h1>
+
+            <p>
+                visita nuestras tiendas y conoce
+                nuestros robots del futuro.
+            </p>
+
+        </section>
+
+
+        
+
+        <section>
+
+            <h2>
+                Puntos de atención
+            </h2>
+
+
+            <div class="cards">
+
+
+                
+
+                <article>
+
+                    <h3>
+                         Popayán
+                    </h3>
+
+                    <p>
+                        Carrera 5 # 10-25
+                    </p>
+
+                    <p>
+                        Lunes a sábado
+                    </p>
+
+                    <p>
+                        9:00 AM - 6:00 PM
+                    </p>
+
+                    <button
+                        onclick="mostrarHorario('popayán')"
+                    >
+                        Ver información
+                    </button>
+
+                </article>
+
+
+               
+
+                <article>
+
+                    <h3>
+                         Cali
+                    </h3>
+
+                    <p>
+                        Carrera 5 # 12-40
+                    </p>
+
+                    <p>
+                        Lunes a sábado
+                    </p>
+
+                    <p>
+                        9:00 AM - 7:00 PM
+                    </p>
+
+                    <button
+                        onclick="mostrarHorario('cali')"
+                    >
+                        Ver información
+                    </button>
+
+                </article>
+
+
+               
+
+                <article>
+
+                    <h3>
+                         Bogotá
+                    </h3>
+
+                    <p>
+                        Carrera 15 # 80-20
+                    </p>
+
+                    <p>
+                        Lunes a domingo
+                    </p>
+
+                    <p>
+                        10:00 AM - 8:00 PM
+                    </p>
+
+                    <button
+                        onclick="mostrarHorario('bogotá')"
+                    >
+                        ver información
+                    </button>
+
+                </article>
+
+
+            </div>
+
+
+            <p id="horario"></p>
+
+        </section>
+
+
+        
+
+        <section class="destacado">
+
+            <h2>
+                no encuentras una tienda cerca
+            </h2>
+
+            <p>
+                puedes comunicarte con nosotros para
+                consultar 
+            </p>
+
+            <a href="Contactos.html">
+
+                <button>
+                    ir a contactos
+                </button>
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
     
+
+    <footer>
+
+        <p>
+            © 2026 RoboFuture - Tienda de Robots del Futuro
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        
+
+        function mostrarHorario(ciudad) {
+
+            document.getElementById("horario").innerHTML =
+
+                " Has seleccionado nuestra tienda de " +
+                "<strong>" +
+                ciudad +
+                "</strong>. " +
+                "te espero";
+
+        }
+
+
+        
+
+        document
+        .getElementById("modoOscuro")
+        .addEventListener("click", function() {
+
+            document.body.classList.toggle("oscuro");
+
+
+            if (
+                document.body.classList.contains("oscuro")
+            ) {
+
+                this.innerHTML =
+                    " modo claro";
+
+            } else {
+
+                this.innerHTML =
+                    " modo oscuro";
+
+            }
+
+        });
+
+    </script>
+
+
 </body>
+
 </html>

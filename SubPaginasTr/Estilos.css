@@ -1,0 +1,652 @@
+
+
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #eef3f8;
+
+    color: #17202a;
+
+    line-height: 1.6;
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header {
+
+    background-color: white;
+
+    min-height: 110px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 15px 7%;
+
+    border-bottom: 3px solid #0757a0;
+
+}
+
+
+.logo {
+
+    width: 110px;
+
+    height: auto;
+
+    transition: 0.3s;
+
+}
+
+
+/* HOVER DEL LOGO */
+
+.logo:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+/* ==========================================
+   MENÚ
+========================================== */
+
+nav {
+
+    background-color: #0757a0;
+
+    padding: 15px 7%;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.15);
+
+}
+
+
+nav ul {
+
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    padding: 9px 15px;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+
+}
+
+
+/* HOVER DEL MENÚ */
+
+nav a:hover {
+
+    background-color: white;
+
+    color: #0757a0;
+
+}
+
+
+/* ==========================================
+   CONTENIDO
+========================================== */
+
+main {
+
+    width: 86%;
+
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+}
+
+
+/* ==========================================
+   SECCIONES
+========================================== */
+
+section {
+
+    background-color: white;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    border-left: 5px solid #0757a0;
+
+}
+
+
+/* ==========================================
+   TÍTULOS
+========================================== */
+
+h1 {
+
+    color: #0757a0;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+}
+
+
+h2 {
+
+    color: #0757a0;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+h3 {
+
+    color: #0757a0;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+
+}
+
+
+p {
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 20px;
+
+}
+
+
+.robot-card,
+article {
+
+    background-color: #f8fafc;
+
+    border: 1px solid #d5dce3;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* ==========================================
+   HOVER DE TARJETAS
+========================================== */
+
+.robot-card:hover,
+article:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.15);
+
+    border-color: #0757a0;
+
+}
+
+
+/* ==========================================
+   IMÁGENES
+========================================== */
+
+article img {
+
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+article:hover img {
+
+    transform: scale(1.03);
+
+}
+
+
+/* ==========================================
+   PRECIO
+========================================== */
+
+.precio {
+
+    color: #0757a0;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+
+}
+
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+button {
+
+    background-color: #0757a0;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-top: 12px;
+
+    transition:
+        background-color 0.3s,
+        transform 0.2s;
+
+}
+
+
+/* HOVER DEL BOTÓN */
+
+button:hover {
+
+    background-color: #0b78d0;
+
+    transform: scale(1.05);
+
+}
+
+
+/* AL PRESIONAR */
+
+button:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* ==========================================
+   FORMULARIO
+========================================== */
+
+form {
+
+    display: grid;
+
+    gap: 12px;
+
+    max-width: 650px;
+
+    margin-top: 20px;
+
+}
+
+
+label {
+
+    font-weight: bold;
+
+    color: #17202a;
+
+}
+
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #bfc8d1;
+
+    border-radius: 7px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    background-color: white;
+
+    transition: 0.3s;
+
+}
+
+
+/* CUANDO SE SELECCIONA UN CAMPO */
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    outline: none;
+
+    border-color: #0757a0;
+
+    box-shadow:
+        0 0 5px rgba(7, 87, 160, 0.3);
+
+}
+
+
+/* ==========================================
+   MENSAJES JAVASCRIPT
+========================================== */
+
+#mensaje,
+#respuesta,
+#horario {
+
+    background-color: #e7f2ff;
+
+    color: #0757a0;
+
+    border-left: 4px solid #0757a0;
+
+    padding: 12px;
+
+    margin-top: 20px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+}
+
+
+/* ==========================================
+   SECCIÓN DESTACADA
+========================================== */
+
+.destacado {
+
+    text-align: center;
+
+    background-color: #e7f2ff;
+
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    background-color: #0757a0;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 22px;
+
+    margin-top: 50px;
+
+    border-top: 4px solid #0b78d0;
+
+}
+
+
+footer p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE - TABLETS
+========================================== */
+
+@media (max-width: 900px) {
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE - CELULARES
+========================================== */
+
+@media (max-width: 650px) {
+
+    header {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 15px;
+
+        padding: 20px;
+
+    }
+
+
+    nav {
+
+        padding: 15px;
+
+    }
+
+
+    nav ul {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    nav a {
+
+        display: block;
+
+        width: 180px;
+
+        text-align: center;
+
+    }
+
+
+    main {
+
+        width: 92%;
+
+        margin: 25px auto;
+
+    }
+
+
+    section {
+
+        padding: 20px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    article img {
+
+        height: 200px;
+
+    }
+
+
+    button {
+
+        width: 100%;
+
+    }
+
+}
+body.oscuro {
+    background-color: #121820;
+    color: white;
+}
+
+body.oscuro header {
+    background-color: #1b2633;
+}
+
+body.oscuro section {
+    background-color: #1b2633;
+    color: white;
+}
+
+body.oscuro article {
+    background-color: #253342;
+    border-color: #405264;
+}
+
+body.oscuro h1,
+body.oscuro h2,
+body.oscuro h3 {
+    color: #4da3ff;
+}
+
+body.oscuro input,
+body.oscuro textarea,
+body.oscuro select {
+    background-color: #253342;
+    color: white;
+}

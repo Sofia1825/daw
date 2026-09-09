@@ -1,11 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RobotFuture - Contactos</title>
+
+    <link
+        rel="stylesheet"
+        href="estilos.css"
+    >
+
 </head>
+
 <body>
+
+
     
+
+    <header>
+
+        <a href="../index.html">
+
+            <img
+                src="../img/logo.png"
+                alt="Logo de RobotFuture"
+                class="logo"
+            >
+
+        </a>
+
+
+        
+
+        <button id="modoOscuro">
+            modo oscuro
+        </button>
+
+    </header>
+
+
+    
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="../index.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="Modelos.html">
+                    Modelos
+                </a>
+            </li>
+
+            <li>
+                <a href="Ubicaciones.html">
+                    Ubicaciones
+                </a>
+            </li>
+
+            <li>
+                <a href="Contactos.html">
+                    Contactos
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <main>
+
+
+        
+
+        <section>
+
+            <h1>
+                Contacta con nosotros
+            </h1>
+
+            <p>
+                ¿Tienes preguntas sobre nuestros robots?
+                Escríbenos y nuestro equipo estará
+                disponible para ayudarte.
+            </p>
+
+        </section>
+
+
+        
+
+        <section class="cards">
+
+
+            <article>
+
+                <h3>
+                     Correo
+                </h3>
+
+                <p>
+                    contacto@robotfuture.com
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>
+                     Teléfono
+                </h3>
+
+                <p>
+                    +57 300 123 4567
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>
+                     Atención
+                </h3>
+
+                <p>
+                    Lunes a sábado
+                    <br>
+                    9:00 AM - 6:00 PM
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+
+        <section>
+
+            <h2>
+                Envíanos un mensaje
+            </h2>
+
+
+            <form id="formularioContacto">
+
+
+                <label for="nombre">
+                    Nombre:
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Escribe tu nombre"
+                >
+
+
+                <label for="correo">
+                    Correo electrónico:
+                </label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="ejemplo@gmail.com"
+                >
+
+
+                <label for="motivo">
+                    Motivo de contacto:
+                </label>
+
+                <select id="motivo">
+
+                    <option>
+                        Información sobre robots
+                    </option>
+
+                    <option>
+                        Comprar un robot
+                    </option>
+
+                    <option>
+                        Soporte técnico
+                    </option>
+
+                    <option>
+                        Otro
+                    </option>
+
+                </select>
+
+
+                <label for="mensajeTexto">
+                    Mensaje:
+                </label>
+
+                <textarea
+                    id="mensajeTexto"
+                    rows="6"
+                    placeholder="Escribe tu mensaje aquí..."
+                ></textarea>
+
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+
+            </form>
+
+
+            <p id="respuesta"></p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 RobotFuture - Tienda de Robots del Futuro
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        
+
+        document
+        .getElementById("formularioContacto")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            let nombre =
+                document.getElementById("nombre").value.trim();
+
+            let correo =
+                document.getElementById("correo").value.trim();
+
+            let mensaje =
+                document.getElementById("mensajeTexto").value.trim();
+
+
+            if (
+                nombre === "" ||
+                correo === "" ||
+                mensaje === ""
+            ) {
+
+                document.getElementById("respuesta").innerHTML =
+                    " Por favor, completa todos los campos.";
+
+                return;
+
+            }
+
+
+            if (!correo.includes("@")) {
+
+                document.getElementById("respuesta").innerHTML =
+                    " Ingresa un correo electrónico válido.";
+
+                return;
+
+            }
+
+
+            document.getElementById("respuesta").innerHTML =
+
+                " ¡Gracias, <strong>" +
+                nombre +
+                "</strong>! " +
+                "Tu mensaje fue enviado correctamente.";
+
+
+            document
+            .getElementById("formularioContacto")
+            .reset();
+
+        });
+
+
+        
+
+        document
+        .getElementById("modoOscuro")
+        .addEventListener("click", function() {
+
+            document.body.classList.toggle("oscuro");
+
+
+            if (
+                document.body.classList.contains("oscuro")
+            ) {
+
+                this.innerHTML =
+                    " Modo claro";
+
+            } else {
+
+                this.innerHTML =
+                    " Modo oscuro";
+
+            }
+
+        });
+
+    </script>
+
+
 </body>
+
 </html>

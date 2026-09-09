@@ -8,9 +8,17 @@
 </head>
 <body>
     <header>
-        <a href="../Index.html">
-            <img src="../img/logo.png" alt="El futuro es hoy" class="logo">
-        </a>
+         <a href="../index.html">
+        <img
+            src="../img/logo.png"
+            alt="el futuro es hoy"
+            class="logo"
+        >
+    </a>
+
+    <button id="modoOscuro">
+        modo oscuro
+    </button>
     </header>
     <nav>
     <ul>
@@ -36,22 +44,97 @@
         <div class="cards">
 
             <article>
-                <img src="../img/robot1.jpg" alt="Robot RoboHome X1">
+                <img src="../img/robot1.jpg" alt="robot limpia">
 
-                <h3>RoboHome X1</h3>
+                <h3>robot limpia</h3>
                 <p>
                     robot asistente para realizar tareas del hogar
                 </p>
                 <p>
                     <strong>Precio:</strong> $2.500.000 COP
                 </p>
-                <button onclick="mostrarInfo('RoboHome X1')">
+                <button onclick="mostrarInfo('robot limpia')">
                     Ver información
                 </button>
             </article>
             <article>
                 <img src="../img/robot2.jpg" alt="robot guardia 69">
                 <h3> guardia 69</h3>
+                <p>
+                    robot inteligente para la seguridad de tu hogar
+                </p>
+                <p>
+                    <strong>Precio:</strong> $4.200.000 COP
+                </p>
+
+                <button onclick="mostrarInfo('robot guardia 69')">
+                    Ver información
+                </button>
+            
             </article>
+             <article>
+                <img src="../img/robot3.jpg" alt="robot sabiondo">
+
+                <h3>robot sabiondo</h3>
+
+                <p>
+                    robot educativo pensado para aprender
+                    
+                </p>
+
+                <p>
+                    <strong>Precio:</strong> $1.800.000 COP
+                </p>
+
+                <button onclick="mostrarInfo('robot sabiondo')">
+                    Ver información
+                </button>
+            </article>
+            </div>
+            <p id="mensaje"></p>
+
+            </section>
+
+            </main>
+
+            <footer>
+            <p>© 2026 RobotFuture - Tienda de Robots del Futuro</p>
+            </footer>
+
+
+            <script>
+
+            function mostrarInfo(robot) {
+
+            document.getElementById("mensaje").innerHTML =
+            "selecionaste este robot <strong>" +
+            robot +
+            "</strong>. que buena elecion";
+
+            }
+            document
+        .getElementById("modoOscuro")
+        .addEventListener("click", function() {
+
+            document.body.classList.toggle("oscuro");
+
+
+            if (
+                document.body.classList.contains("oscuro")
+            ) {
+
+                this.innerHTML =
+                    " modo claro";
+
+            } else {
+
+                this.innerHTML =
+                    " modo oscuro";
+
+            }
+
+        });
+
+</script>
 </body>
 </html>

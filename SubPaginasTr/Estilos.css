@@ -476,29 +476,21 @@ select:focus {
    FOOTER
 ========================================== */
 
-footer {
-
-    background-color: #0757a0;
-
+/* Footer pegado al fondo sin rodeos */
+.pie-pagina {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e5bb8;
     color: white;
-
     text-align: center;
-
-    padding: 22px;
-
-    margin-top: 50px;
-
-    border-top: 4px solid #0b78d0;
-
+    padding: 12px 0;
 }
 
-
-footer p {
-
-    margin: 0;
-
-    font-size: 14px;
-
+/* Evita que el footer tape la última parte de tus tarjetas de productos */
+body {
+    padding-bottom: 60px; 
 }
 
 
@@ -776,5 +768,19 @@ nav {
     line-height: 1.4;
 }
 
+/* Footer pegado al fondo sin rodeos */
+.pie-pagina {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e5bb8;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+}
 
-
+/* Evita que el footer tape la última parte de tus tarjetas de productos */
+body {
+    padding-bottom: 60px; 
+}
